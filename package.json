@@ -1,6 +1,6 @@
 {
   "name": "react-native-fill-up-button",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A button thet fills up with color on press and hold.",
   "main": "index.js",
   "scripts": {

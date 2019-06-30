@@ -1,4 +1,5 @@
 # React Native Fill Up Button
+[![npm version](https://badge.fury.io/js/react-native-fill-up-button.svg)](https://badge.fury.io/js/react-native-fill-up-button)
 
 A React Native Button component with fills up animation on press and hold.
 

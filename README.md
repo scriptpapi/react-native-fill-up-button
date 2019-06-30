@@ -62,4 +62,5 @@ export default class App extends React.Component {
 
 This will result in the following:
 
+![FillUpButton](https://user-images.githubusercontent.com/26725901/60399562-f0ca2c00-9b6e-11e9-8c4d-12f9b0a13420.gif)
 

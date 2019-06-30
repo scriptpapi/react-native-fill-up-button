@@ -62,5 +62,4 @@ export default class App extends React.Component {
 
 This will result in the following:
 
-![FillUpButton](https://user-images.githubusercontent.com/26725901/60399562-f0ca2c00-9b6e-11e9-8c4d-12f9b0a13420.gif)
-
+![fillUpButton](https://user-images.githubusercontent.com/26725901/60399592-50c0d280-9b6f-11e9-8967-747d218e10bd.gif)

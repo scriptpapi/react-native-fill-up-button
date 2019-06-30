@@ -1,0 +1,37 @@
+{
+  "name": "react-native-fill-up-button",
+  "version": "1.0.0",
+  "description": "A button thet fills up with color on press and hold.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MentalN/react-native-slide-up-down.git"
+  },
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "Animation",
+    "Button-animation",
+    "button",
+    "fill",
+    "fill-on-press",
+    "press",
+    "hold",
+    "up",
+    "fill-up"
+  ],
+  "author": "Nawaf Abdullah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MentalN/react-native-fill-up-button/issues"
+  },
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.54.1"
+  }
+}

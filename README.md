@@ -1,69 +1,64 @@
-# React Native Sliding Button
-[![npm version](https://badge.fury.io/js/rn-sliding-button.svg)](https://badge.fury.io/js/rn-sliding-button)
+# React Native Fill Up Button
 
-React Native Button component which support Slide event to perform action.It support only slideComplete event not tappe event.
+A React Native Button component with fills up animation on press and hold.
 
-![rnslidingbutton](https://user-images.githubusercontent.com/31007929/34517639-d1fab516-f0a1-11e7-9158-b29bc6fe5591.gif)
 
 # Installation.
-Install the package with NPM.
+
+using NPM
 
 ```sh
-npm install rn-sliding-button --save
+npm install react-native-fill-up-button --save
 ```
 
 Or with YARN
 
 ```sh
-yarn install rn-sliding-button
+yarn install react-native-fill-up-button
 ```
 
 
 # How to use.
 
-Very simple to use just add this component in your file.
+All you have to is just import the component to your javascript file using:
+
 ```js
-// import packages
-import {RNSlidingButton, SlideDirection} from 'rn-sliding-button';
-
-// use in your class
-onSlideRight = () => {
-    //perform Action on slide success.
-};
-
-<RNSlidingButton
-  style={{
-    width: 240
-  }}
-  height={35}
-  onSlidingSuccess={this.onSlideRight}
-  slideDirection={SlideDirection.RIGHT}>
-  <View>
-    <Text numberOfLines={1} style={styles.titleText}>
-      SLIDE RIGHT TO ACCEPT >
-    </Text>
-  </View>
-</RNSlidingButton>
-
-const styles = StyleSheet.create({
-    titleText: {
-        fontSize: 17,
-        fontWeight: 'normal',
-        textAlign: 'center',
-        color: '#ffffff'
-    }
-});
+import FillUpButton from 'react-native-fill-up-button';
 ```
 
-API
----
-### SlidingButton
+Then using it as the project can is as simple as the following:
 
-| Prop           | Type       | Default               |   Description
-| -------------  |:----------:|:---------------------:|:------------------
-| height         | number     | <required>            | Height of button
-| slideDirection | string     | `SlideDirection.RIGHT`| Determines which direction to slide. Either `SlideDirection.LEFT`, `SlideDirection.RIGHT`, `SlideDirection.BOTH`.
-| onSlidingSuccess | function   | <optional>            | Fired when slide succeeds
-| onSlide        | function   | <optional>            | Fired on every movement. Distance of movement is passed as argument.
-| successfulSlidePercent | number | <optional>        | Percent of total button width needed to slide before movement is seen as a successful slide. Default is 40.
+```js
+import FillUpButton from 'react-native-fill-up-button';
+
+export default class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+        buttontext: "Not Pressed"
+    }
+  }
+
+  render() {
+    return (
+      <View style={{flex: 1, justifyContent: 'center', alignItems: "center"}}>
+        <Text>{this.state.buttontext}</Text>
+        <FillUpButton increment={0.01}
+                      buttonBackgroundColor={'blue'}
+                      fillupColor={'green'}
+                      height={60}
+                      width={200}
+                      buttonText= "PRESS AND HOLD"
+                      incrementSpeed={10}
+                      buttonTextStyle={{ fontSize: 20, color: 'white', fontWeight: 'bold'}}
+                      activeOpacity={0.7}
+                      onFilled={ () => this.setState({buttontext: "PRESSED!"}) }
+        />
+      </View>
+    );
+  }
+}
+```
+This will result in the following:
+
 
